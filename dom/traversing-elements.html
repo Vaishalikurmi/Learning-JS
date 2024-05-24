@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traversing elements</title>
+  </head>
+  <body>
+    <ul id="menu">
+      <li>Home</li>
+      <li>Products</li>
+      <li class="current">Customer Support</li>
+      <li>Careers</li>
+      <li>Investors</li>
+      <li>News</li>
+      <li>About Us</li>
+    </ul>
+  </body>
+  <script type="text/javascript">
+    function getSiblings(e) {
+      let siblings = [];
+
+      if (!e.parentNode) {
+        return siblings;
+      }
+
+      let sibling = e.parentNode.firstChild;
+
+      while (sibling) {
+        if (sibling.nodeType === 1 && sibling !== e) {
+          siblings.push(sibling);
+        }
+        sibling = sibling.nextSibling;
+      }
+      return siblings;
+    }
+
+    console.log(getSiblings(document.querySelector(".current")));
+  </script>
+</html>
