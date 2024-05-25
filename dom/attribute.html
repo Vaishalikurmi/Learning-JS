@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>DOM</title>
+  </head>
+  <body>
+    <h1 id="heading" data-count="4">Welocome To DOM's</h1>
+
+    <form id="form">
+      first name: <input type="text" class="fname" /> <br /><br />
+      second name:<input type="text" class="lname" /><br /><br />
+      <input type="submit" class="submit" />
+    </form>
+    <h3>my full name is</h3>
+    <p id="value-of-form"></p>
+  </body>
+  <script>
+    // let node = document.querySelector('#img-hero');
+
+    // let a = document.createAttribute('alt');
+
+    // a.value ="img"
+
+    // node.setAttributeNode(a);
+
+    // node.setAttribute("alt", "Created img")
+
+    // let isSubmitting;
+    // let isLoading;
+
+    // function submitForm() {
+    //    btn.setAttribute("disabled", "")
+    //    setTimeout(() => {
+    //      btn.removeAttribute("disabled")
+    //    }, 2000)
+    // }
+
+    let btnNode = document.getElementsByClassName("btn");
+
+    console.log(btnNode);
+
+    // let headingNode =  document.getElementById("heading")
+
+    // let input = document.querySelector("input")
+
+    // function submitForm(e) {
+    //     e.preventDefault()
+    //     input.toggleAttribute("disabled")
+    // }
+
+    // btnNode.addEventListener("click",submitForm)
+
+    // console.log(typeof Number(headingNode.getAttribute("data-count")));
+
+    let a = document.getElementsByTagName("form");
+    console.log(typeof a);
+  </script>
+</html>
