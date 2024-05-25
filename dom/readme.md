@@ -5,3 +5,5 @@
 // https://www.geeksforgeeks.org/dom-document-object-model/
 
 https://www.javascripttutorial.net/javascript-dom/document-object-model-in-javascript/
+
+https://www.freecodecamp.org/news/javascript-in-the-browser-dom-and-events/
