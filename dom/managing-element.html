@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="#" id="form2">
+      <h2>choose your subject :</h2>
+      <label for="sub1" class="subject">
+        COMPUTER<input name="sub1" id="sub1" />
+      </label>
+      <label for="sub1" class="subject">
+        SCIENCE<input type="checkbox" name="sub2" id="sub2" />
+      </label>
+      <label for="sub1" class="subject">
+        BIOTECH<input type="checkbox" name="sub3" id="sub3" />
+      </label>
+      <label for="sub1" class="subject">
+        HINDI<input type="checkbox" name="sub4" id="sub4" /> </label
+      ><br /><br />
+      <button id="btn">submit</button>
+    </form>
+  </body>
+  <script>
+    let input = document.getElementById("sub1");
+    input.setAttribute("type", "checkbox");
+
+    console.log(input.getAttribute("type"));
+    console.log(input.hasAttribute("name"));
+  </script>
+</html>

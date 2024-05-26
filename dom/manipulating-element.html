@@ -75,7 +75,25 @@
     // let list2 = document.createElement("li");
     // list2.textContent = "js";
 
-    // let ele = document.getElementById("listone");
+    // let ele = document.getElementById("menu");
+    // console.log(ele);
     // ele.prepend("hello");
+
+    // let list = document.createElement("li");
+    // list.textContent = "css";
+    // list.id = "listtwo";
+    // ele.replaceChild(list, ele.firstElementChild);
+    // console.log(ele.replaceChild());
+
+    let menu = document.getElementById("menu");
+    let cloneNode = menu.cloneNode(true);
+    cloneNode.id = "menu2";
+    document.body.appendChild(cloneNode);
+
+    let cloneNodeEle = document.createElement("li");
+    cloneNodeEle.innerHTML = "js";
+    cloneNode.appendChild(cloneNodeEle);
+
+    document.body.inser(cloneNode, menu);
   </script>
 </html>
