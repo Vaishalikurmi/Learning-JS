@@ -5,6 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
-  <script></script>
+  <body>
+    <div id="demo">
+      <input type="text" />
+      <button id="btn" value="save" ">
+        Click me
+      </button>
+      <!-- <a
+        href="https://www.javascripttutorial.net/javascript-dom/javascript-events/"
+        id="a"
+        >link</a
+      > -->
+    </div>
+  </body>
+  <script>
+    // let container = document.getElementById("btn");
+    // btn.addEventListener("click", function (event) {
+    //   console.log(event.target);
+    // });
+
+    // let link = document.getElementById("a");
+    // link.addEventListener("click", (event) => {
+    //   console.log("clicked");
+    //   event.preventDefault();
+    // });
+
+    // let container = document.getElementById("btn");
+    // container.addEventListener("click", function (event) {
+    //   console.log("click");
+    // });
+
+    // document.body.addEventListener("click", (event) => {
+    //   console.log("body is clicked");
+    //   event.stopPropagation();
+    // });
+
+    // function btnAlert() {
+    //   alert("clicked");
+    // }
+
+    let btn = document.querySelector("#btn");
+    btn.addEventListener("click", function (event) {
+      alert(event.type); // click
+    });
+
+    btn.addEventListener("click", function (event) {
+      alert("Clicked!");
+    });
+  </script>
 </html>
