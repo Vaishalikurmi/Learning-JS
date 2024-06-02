@@ -3,22 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>JS event</title>
+    <link rel="stylesheet" href="event.css" />
   </head>
   <body>
-    <div id="demo">
-      <input type="text" />
-      <button id="btn" value="save" ">
-        Click me
-      </button>
-      <!-- <a
-        href="https://www.javascripttutorial.net/javascript-dom/javascript-events/"
-        id="a"
-        >link</a
-      > -->
+    <div id="loading-img">
+      <img src="scenery.jpg" alt="nature" id="img1" />
+      <img src="loading.png" alt="load" id="img2" />
     </div>
   </body>
-  <script>
+  <script type="text/javascript">
     // let container = document.getElementById("btn");
     // btn.addEventListener("click", function (event) {
     //   console.log(event.target);
@@ -44,13 +38,33 @@
     //   alert("clicked");
     // }
 
-    let btn = document.querySelector("#btn");
-    btn.addEventListener("click", function (event) {
-      alert(event.type); // click
-    });
+    // let btn = document.querySelector("#btn").textContent;
 
-    btn.addEventListener("click", function (event) {
-      alert("Clicked!");
-    });
+    // window.addEventListener("DOMContentLoaded", (event) => {
+    //   console.log("DOM is fully loaded!");
+
+    //   // window.close()
+    // });
+
+    // document.addEventListener("load", (event) => {
+    //   console.log("DOM is fully loaded!");
+    // });
+
+    // let text = document.getElementById("text");
+
+    // window.onbeforeunload = function () {
+    //   return "Are you sure that you want to leave this page?";
+    // };
+
+    // document.addEventListener("unload", (event) => {
+    //   console.log("DOM is fully loaded!");
+    // });
+
+    // window.onload = (event)=>{
+    //   console.log("loaded");
+    // };
+
+    let img = document.getElementById("img2");
+    img.addEventListener("onload", () => {});
   </script>
 </html>
