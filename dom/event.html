@@ -11,6 +11,13 @@
       <img src="scenery.jpg" alt="nature" id="img1" />
       <img src="loading.png" alt="load" id="img2" />
     </div>
+
+    <p>Move focus to the password field to see the effect:</p>
+
+    <form id="form">
+      <input type="text" placeholder="username" />
+      <input type="password" placeholder="password" />
+    </form>
   </body>
   <script type="text/javascript">
     // let container = document.getElementById("btn");
@@ -64,7 +71,25 @@
     //   console.log("loaded");
     // };
 
-    let img = document.getElementById("img2");
-    img.addEventListener("onload", () => {});
+    // let img = document.getElementById("img2");
+    // img.addEventListener("onload", () => {});
+
+    let pwd = document.querySelector('input[type="password"]');
+
+    pwd.addEventListener(
+      "focus",
+      (e) => {
+        e.target.style.backgroundColor = "black";
+      },
+      false
+    );
+
+    pwd.addEventListener(
+      "blur",
+      (e) => {
+        e.target.style.backgroundColor = "white";
+      },
+      false
+    );
   </script>
 </html>
