@@ -17,7 +17,14 @@
     <form id="form">
       <input type="text" placeholder="username" />
       <input type="password" placeholder="password" />
+      <button id="myButton">submit</button>
     </form>
+
+    <ul id="myList">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
   </body>
   <script type="text/javascript">
     // let container = document.getElementById("btn");
@@ -74,22 +81,44 @@
     // let img = document.getElementById("img2");
     // img.addEventListener("onload", () => {});
 
-    let pwd = document.querySelector('input[type="password"]');
+    // let pwd = document.querySelector('input[type="password"]');
 
-    pwd.addEventListener(
-      "focus",
-      (e) => {
-        e.target.style.backgroundColor = "black";
-      },
-      false
-    );
+    // pwd.addEventListener(
+    //   "focus",
+    //   (e) => {
+    //     e.target.style.backgroundColor = "black";
+    //   },
+    //   false
+    // );
 
-    pwd.addEventListener(
-      "blur",
-      (e) => {
-        e.target.style.backgroundColor = "white";
-      },
-      false
-    );
+    // pwd.addEventListener(
+    //   "blur",
+    //   (e) => {
+    //     e.target.style.backgroundColor = "white";
+    //   },
+    //   false
+    // );
+
+    // let btn = document.querySelector("#myButton");
+
+    // let myObject = {
+    //   handleEvent: function (e) {
+    //     e.preventDefault();
+    //     alert("first function");
+    //   },
+    // };
+
+    // btn.addEventListener("click", myObject, false);
+
+    //event delegation
+
+    // let list = document.getElementById("myList");
+    // list.addEventListener("click", function (event) {
+    //   // Checking if the clicked element is an li
+    //   if (event.target.tagName === "LI") {
+    //     // Code to execute when an li is clicked
+    //     console.log("Item clicked:", event.target.textContent);
+    //   }
+    // });
   </script>
 </html>
