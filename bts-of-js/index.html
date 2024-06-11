@@ -9,19 +9,39 @@
     <h1>Learning Js</h1>
   </body>
   <script>
-    function a() {
-      debugger;
-      console.log("calling function a");
-      b();
-      console.log("finished");
-    }
+    // let heading = document.getElementsByTagName("h1");
+    // console.log(typeof heading);
+    // function a() {
+    //   debugger;
+    //   console.log("calling function a");
+    //   b();
+    //   console.log("finished");
+    // }
 
-    function b() {
+    // function b() {
+    //   debugger;
+    //   console.log("calling function b");
+    // }
+    // debugger;
+    // a();
+
+    // scope chain
+    debugger;
+    let a = "hello";
+
+    function First() {
+      let b = "vaishali";
       debugger;
-      console.log("calling function b");
+      Second();
+
+      function Second() {
+        debugger;
+        let c = "kurmi";
+        console.log(a + b + c);
+      }
     }
 
     debugger;
-    a();
+    First();
   </script>
 </html>
