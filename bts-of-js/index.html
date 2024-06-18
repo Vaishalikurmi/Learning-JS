@@ -9,6 +9,7 @@
     <h1>Learning Js</h1>
   </body>
   <script>
+    "use strict";
     // let heading = document.getElementsByTagName("h1");
     // console.log(typeof heading);
     // function a() {
@@ -26,22 +27,43 @@
     // a();
 
     // scope chain
-    debugger;
-    let a = "hello";
 
-    function First() {
-      let b = "vaishali";
-      debugger;
-      Second();
+    // let a = "hello";
 
-      function Second() {
-        debugger;
-        let c = "kurmi";
-        console.log(a + b + c);
-      }
+    // function First() {
+    //   let b = "vaishali";
+    //   debugger;
+    //   Second();
+
+    //   function Second() {
+    //     debugger;
+    //     let c = "kurmi";
+    //     console.log(a + b + c);
+    //   }
+    // }
+
+    // debugger;
+    // First();
+
+    function sum(a, b) {
+      // console.log(add);
+      // add = a + b;
+      // console.log(add);
     }
 
-    debugger;
-    First();
+    delete sum(1, 2);
+
+    // function add(a=4 , b=8){
+    //   "use strict"
+
+    //   return(a+b);
+    // }
+
+    class c1 {
+      test() {
+        delete object.prototype;
+      }
+    }
+    new c1.test();
   </script>
 </html>
