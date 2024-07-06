@@ -6,7 +6,7 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Learning Js</h1>
+    <h1 id="main-heading">Learning Js</h1>
   </body>
   <script>
     "use strict";
@@ -45,6 +45,8 @@
     // debugger;
     // First();
 
+    //can't delete a function or any variable
+
     function sum(a, b) {
       // console.log(add);
       // add = a + b;
@@ -66,6 +68,52 @@
     // }
     // new c1.test();
 
-    var strin;
+    // var strin;
+
+    // this -->> example of call() , apply()
+
+    const person1 = {
+      fullName: function () {
+        console.log(this.firstName + this.lastName);
+        console.log(this);
+      },
+    };
+
+    const person2 = {
+      firstName: "vaishali",
+      lastName: "kurmi",
+    };
+
+    person1.fullName.call(person2);
+
+    // this-->>  example of  bind()
+
+    const person = {
+      firstName: "John",
+      lastName: "Doe",
+      fullName: function () {
+        console.log(this.firstName + " " + this.lastName);
+        console.log(this);
+      },
+    };
+
+    const member = {
+      firstName: "Hege",
+      lastName: "Nilsen",
+    };
+
+    let fullName = person.fullName.bind(member);
+    fullName();
+    person.fullName();
+
+    //this-->  example of this in an event
+
+    document.getElementById("main-heading").addEventListener(
+      "click",
+      function () {
+        console.log(this);
+      },
+      false
+    );
   </script>
 </html>
