@@ -74,8 +74,8 @@
 
     const person1 = {
       fullName: function () {
-        console.log(this.firstName + this.lastName);
-        console.log(this);
+        // console.log(this.firstName + this.lastName);
+        // console.log(this);
       },
     };
 
@@ -92,8 +92,8 @@
       firstName: "John",
       lastName: "Doe",
       fullName: function () {
-        console.log(this.firstName + " " + this.lastName);
-        console.log(this);
+        //console.log(this.firstName + " " + this.lastName);
+        //console.log(this);
       },
     };
 
@@ -111,9 +111,29 @@
     document.getElementById("main-heading").addEventListener(
       "click",
       function () {
-        console.log(this);
+        //console.log(this);
       },
       false
     );
+
+    let a;
+    //console.log(typeof a);
+
+    // higher order function
+
+    const arr = [2, 4, 5, 6];
+    function add(arr) {
+      let sum = 0;
+      sum = sum + arr;
+      return sum;
+    }
+    //onsole.log(arr.reduce(add));
+
+    const output = arr.filter((curr) => {
+      if (4 >= curr) {
+        return curr;
+      }
+    });
+    console.log(output);
   </script>
 </html>
