@@ -86,7 +86,7 @@
 
     person1.fullName.call(person2);
 
-    // this-->>  example of  bind()
+    // ============== this-->>  example of  bind() ======================
 
     const person = {
       firstName: "John",
@@ -106,7 +106,7 @@
     fullName();
     person.fullName();
 
-    //this-->  example of this in an event
+    // ============== this-->  example of this in an event ======================
 
     document.getElementById("main-heading").addEventListener(
       "click",
@@ -119,7 +119,7 @@
     let a;
     //console.log(typeof a);
 
-    // higher order function
+    // ============== higher order function ======================
 
     const arr = [2, 4, 5, 6];
     function add(arr) {
@@ -134,6 +134,29 @@
         return curr;
       }
     });
-    console.log(output);
+    //console.log(output);
+
+    // ============== call stack ======================
+    console.log("start");
+
+    setTimeout(function callStack() {
+      console.log("callstack");
+    }, 3000);
+
+    console.log("end");
+
+    // ==============  WEB API's ======================
+
+    console.log("start");
+
+    setTimeout(function cbt() {
+      console.log("callback time");
+    }, 3000);
+
+    fetch("https://www.youtube.com/watch?v=2WJL19wDH68", function cbf() {
+      then: "cbf";
+    });
+
+    console.log("end");
   </script>
 </html>
