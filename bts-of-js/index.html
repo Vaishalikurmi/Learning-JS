@@ -153,10 +153,40 @@
       console.log("callback time");
     }, 3000);
 
-    fetch("https://www.youtube.com/watch?v=2WJL19wDH68", function cbf() {
-      then: "cbf";
-    });
+    // fetch("https://api.netflix.com").then(function cbf() {
+    //   console.log("callback fetch");
+    // });
 
     console.log("end");
+
+    function greet(callback) {
+      setTimeout(function () {
+        console.log("Hi Musab");
+        callback();
+      }, 1000);
+    }
+
+    function introduce(callback) {
+      setTimeout(function () {
+        console.log("I am your academic advisor");
+        callback();
+      }, 1000);
+    }
+
+    function question(callback) {
+      setTimeout(function () {
+        console.log("Are you currently facing any challenge in your academics");
+        callback();
+      }, 1000);
+    }
+
+    // callback hell
+    greet(function () {
+      introduce(function () {
+        question(function () {
+          console.log("Done");
+        });
+      });
+    });
   </script>
 </html>
