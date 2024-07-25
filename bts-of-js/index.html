@@ -108,13 +108,13 @@
 
     // ============== this-->  example of this in an event ======================
 
-    document.getElementById("main-heading").addEventListener(
-      "click",
-      function () {
-        //console.log(this);
-      },
-      false
-    );
+    // document.getElementById("main-heading").addEventListener(
+    //   "click",
+    //   function () {
+    //     //console.log(this);
+    //   },
+    //   false
+    // );
 
     let a;
     //console.log(typeof a);
@@ -137,56 +137,72 @@
     //console.log(output);
 
     // ============== call stack ======================
-    console.log("start");
+    //console.log("start");
 
-    setTimeout(function callStack() {
-      console.log("callstack");
-    }, 3000);
+    // setTimeout(function callStack() {
+    //   console.log("callstack");
+    // }, 3000);
 
-    console.log("end");
+    //console.log("end");
 
     // ==============  WEB API's ======================
 
-    console.log("start");
+    //console.log("start");
 
-    setTimeout(function cbt() {
-      console.log("callback time");
-    }, 3000);
+    // setTimeout(function cbt() {
+    //   console.log("callback time");
+    // }, 3000);
 
     // fetch("https://api.netflix.com").then(function cbf() {
     //   console.log("callback fetch");
     // });
 
-    console.log("end");
+    //console.log("end");
 
-    function greet(callback) {
-      setTimeout(function () {
-        console.log("Hi Musab");
-        callback();
-      }, 1000);
-    }
+    // function greet(callback) {
+    //   setTimeout(function () {
+    //     console.log("Hi Musab");
+    //     callback();
+    //   }, 1000);
+    // }
 
-    function introduce(callback) {
-      setTimeout(function () {
-        console.log("I am your academic advisor");
-        callback();
-      }, 1000);
-    }
+    // function introduce(callback) {
+    //   setTimeout(function () {
+    //     console.log("I am your academic advisor");
+    //     callback();
+    //   }, 1000);
+    // }
 
-    function question(callback) {
-      setTimeout(function () {
-        console.log("Are you currently facing any challenge in your academics");
-        callback();
-      }, 1000);
-    }
+    // function question(callback) {
+    //   setTimeout(function () {
+    //     console.log("Are you currently facing any challenge in your academics");
+    //     callback();
+    //   }, 1000);
+    // }
 
-    // callback hell
-    greet(function () {
-      introduce(function () {
-        question(function () {
-          console.log("Done");
-        });
-      });
+    // ==============  callback hell ======================
+
+    // greet(function () {
+    //   introduce(function () {
+    //     question(function () {
+    //       console.log("Done");
+    //     });
+    //   });
+    // });
+
+    // ==============  PROMISES ======================
+
+    const myPromise = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve("foo");
+      }, 300);
     });
+
+    console.log(myPromise);
+
+    myPromise
+      .then(handleFulfilledA, handleRejectedA)
+      .then(handleFulfilledB, handleRejectedB)
+      .then(handleFulfilledC, handleRejectedC);
   </script>
 </html>
