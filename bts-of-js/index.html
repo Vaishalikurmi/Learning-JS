@@ -192,17 +192,34 @@
 
     // ==============  PROMISES ======================
 
-    const myPromise = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve("foo");
-      }, 300);
+    // const myPromise = new Promise((resolve, reject) => {
+    //   setTimeout(() => {
+    //     resolve("foo");
+    //   }, 300);
+    // });
+
+    // console.log(myPromise);
+
+    // myPromise
+    //   .then(handleFulfilledA, handleRejectedA)
+    //   .then(handleFulfilledB, handleRejectedB)
+    //   .then(handleFulfilledC, handleRejectedC);
+
+    const p1 = new Promise((resolve, reject) => {
+      let value = 123;
+      return resolve(value);
     });
 
-    console.log(myPromise);
-
-    myPromise
-      .then(handleFulfilledA, handleRejectedA)
-      .then(handleFulfilledB, handleRejectedB)
-      .then(handleFulfilledC, handleRejectedC);
+    p1.then((value) => {
+      console.log(value); // "Success!"
+      return Promise.reject("oh, no!");
+    })
+      .catch((e) => {
+        console.error(e); // "oh, no!"a
+      })
+      .then(
+        () => console.log("after a catch the chain is restored"), // "after a catch the chain is restored"
+        () => console.log("Not fired due to the catch")
+      );
   </script>
 </html>
